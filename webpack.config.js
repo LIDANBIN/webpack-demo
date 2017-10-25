@@ -10,14 +10,14 @@ module.exports = {
     entry: {
         // Configuration options can be passed to the client by adding querystring parameters to the path in the webpack config.
         app: ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000', './src/index.js'],
-        // print: './src/print.js'
+        print: './src/print.js'
     },
     output: {
         // filename: 'bundle.js', // 出口文件
         // 分离出口
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
-        publicPath: '/'
+        publicPath: './'
     },
     plugins: [
         new HtmlWebpackPlugin({ // 创建全新的 index.html 文件，并将所有的 bundle 自动添加到 html 中。
