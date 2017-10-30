@@ -6,6 +6,11 @@ import Print from './print'
 
 Print()
 
+console.log(process);
+if (process.env.NODE_ENV !== 'production') {
+    console.log('Looks like we are in development mode!');
+}
+
 function component() {
     // console.log(MyImage); // MyImage 变量将包含该图像在处理后的最终 url（替换后的url）。
     let element = document.createElement('div')
