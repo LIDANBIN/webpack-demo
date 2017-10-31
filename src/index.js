@@ -6,8 +6,8 @@ import Print from './print'
 
 Print()
 
-console.log(process);
-if (process.env.NODE_ENV !== 'production') {
+console.log(__DEV__, process);
+if (__DEV__) {
     console.log('Looks like we are in development mode!');
 }
 
