@@ -2,9 +2,10 @@ import _ from 'lodash'
 import './style.css' // 引入样式表
 import MyImage from './webpack.svg' // 引入图片，图像将被处理并添加到 output 目录。
 
-import Print from './print'
+// import Print from './print'
 
-Print()
+// Print()
+
 
 console.log(process);
 if (process.env.NODE_ENV !== 'production') {
@@ -21,6 +22,18 @@ function component() {
     img.classList.add('pic')
     img.src = MyImage // loader 会识别这是一个本地文件，并将 './my-image.png' 路径，替换为输出目录中图像的最终路径。
     element.appendChild(img)
+
+    // 代码分离的第三种方式是动态导入，也可以说是按需导入
+    let btn = document.createElement('button')
+    btn.innerHTML = '点击加载print.js'
+    element.appendChild(btn)
+    btn.onclick = () => {
+        import('./print').then((module) => {
+            let print = module.default
+            print()
+        })
+    }
+
     return element
 }
 
