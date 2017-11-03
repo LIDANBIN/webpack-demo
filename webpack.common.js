@@ -16,7 +16,7 @@ module.exports = {
     output: {
         filename: '[name].[chunkhash].js', // hash值用来进行文件名替换，便于浏览器缓存
         path: path.resolve(__dirname, 'dist'),
-        publicPath: './'
+        publicPath: '/'
     },
     plugins: [
         new HtmlWebpackPlugin({
