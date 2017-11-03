@@ -25,7 +25,7 @@ function component() {
 
     // 代码分离的第三种方式是动态导入，也可以说是按需导入
     let btn = document.createElement('button')
-    btn.innerHTML = '点击加载print.js'
+    btn.innerHTML = '点击加载print.jsssss'
     element.appendChild(btn)
     btn.onclick = () => {
         import('./print').then((module) => {
