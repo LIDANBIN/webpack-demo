@@ -11,9 +11,9 @@ const compiler = webpack(config)
 // Tell express to use the webpack-dev-middleware and use the webpack.config.js
 // configuration file as a base.
 var devMiddleware = webpackDevMiddleware(compiler, {
-    reload: true, // 自动加载页面
+    // reload: true, // 自动加载页面
     quiet: true, // 禁止所有控制台输出
-    hot: true,
+    // hot: true,
     // target: 'electron-renderer',
     publicPath: config.output.publicPath
 })
