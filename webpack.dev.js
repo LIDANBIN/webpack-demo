@@ -1,7 +1,5 @@
 const merge = require('webpack-merge')
 const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-
 const common = require('./webpack.common.js')
 
 Object.keys(common.entry).forEach(function (name) {
@@ -12,11 +10,6 @@ Object.keys(common.entry).forEach(function (name) {
 module.exports = merge(common, {
     devtool: 'inline-source-map',
     plugins: [
-        new HtmlWebpackPlugin({
-            filename: 'index.html',
-            template: 'index.html',
-            inject: true
-        }),
         new webpack.HotModuleReplacementPlugin(), // 模块热替换webpack-dev-middleware
         // Use NoErrorsPlugin for webpack 1.x
         new webpack.NoEmitOnErrorsPlugin(),
