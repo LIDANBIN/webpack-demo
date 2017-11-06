@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build:dev": "cross-env NODE_ENV=development webpack --config webpack.dev.config.js --progress --hide-modules",
     "build": "webpack --config webpack.prod.js",
     "watch": "webpack --watch",
     "start": "webpack-dev-server --open",

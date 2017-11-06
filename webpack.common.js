@@ -1,6 +1,4 @@
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
     entry: {
@@ -14,16 +12,12 @@ module.exports = {
         ]
     },
     output: {
-        filename: '[name].[chunkhash].js', // hash值用来进行文件名替换，便于浏览器缓存
-        path: path.resolve(__dirname, 'dist'),
-        publicPath: '/'
+        filename: '[name].js', // hash值用来进行文件名替换，便于浏览器缓存
+        path: path.resolve(__dirname, 'dist')
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            title: 'Output Management'
-        }),
-        new CleanWebpackPlugin(['dist'])
-    ],
+    // plugins: [
+
+    // ],
     module: {
         rules: [
             {
