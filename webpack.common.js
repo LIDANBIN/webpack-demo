@@ -12,7 +12,7 @@ module.exports = {
         ]
     },
     output: {
-        filename: '[name].js', // hash值用来进行文件名替换，便于浏览器缓存
+        filename: '[name].js',
         path: path.resolve(__dirname, 'dist')
     },
     // plugins: [
