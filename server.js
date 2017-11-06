@@ -20,7 +20,7 @@ var devMiddleware = webpackDevMiddleware(compiler, {
 app.use(devMiddleware)
 app.use(webpackHotMiddleware(compiler))
 
-app.use(express.static(__dirname));
+// app.use(express.static(__dirname)); // 可以加上也可以不加
 
 // Serve the files on port 3000.
 app.listen(3000, function () {
