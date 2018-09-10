@@ -2,7 +2,7 @@ import _ from 'lodash'
 import './style.css' // 引入样式表
 import MyImage from './webpack.svg' // 引入图片，图像将被处理并添加到 output 目录。
 
-// import Print from './print'
+import Print from './print'
 
 // Print()
 
